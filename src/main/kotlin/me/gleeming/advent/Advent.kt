@@ -1,7 +1,9 @@
 package me.gleeming.advent
 
-import me.gleeming.advent.day1.SlidingWindow
-import me.gleeming.advent.day1.SonarSweep
+import me.gleeming.advent.day.one.SlidingWindow
+import me.gleeming.advent.day.one.SonarSweep
+import me.gleeming.advent.day.two.Dive
+import me.gleeming.advent.day.two.Dive2
 import me.gleeming.advent.task.AdventTask
 import java.util.*
 import kotlin.collections.HashMap
@@ -77,6 +79,11 @@ fun getDays(): HashMap<Int, List<AdventTask>> {
     dayMap[1] = listOf(
         SonarSweep(),
         SlidingWindow()
+    )
+
+    dayMap[2] = listOf(
+        Dive(),
+        Dive2()
     )
 
     return dayMap

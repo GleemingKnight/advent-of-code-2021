@@ -1,16 +1,17 @@
-package me.gleeming.advent.day1
+package me.gleeming.advent.day.one
 
 import me.gleeming.advent.task.AdventTask
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
+import java.util.stream.Collectors
 
 /**
  * Sliding Window
  * https://adventofcode.com/2021/day/1#part2
  */
 @OptIn(ExperimentalStdlibApi::class)
-class SlidingWindow : AdventTask {
+class SlidingWindow : AdventTask() {
 
     override val name: String
         get() = "Sliding Window"
@@ -19,12 +20,7 @@ class SlidingWindow : AdventTask {
         get() = 2
 
     override fun run() {
-        val reader = BufferedReader(FileReader(File("inputs/day1/SlidingWindow")))
-        var inputLine: String?
-
-        val numbers = ArrayList<Int>()
-        while (reader.readLine().also { inputLine = it } != null) if(inputLine != null) numbers.add(inputLine!!.toInt())
-        reader.close()
+        val numbers = readInput().map { it.toInt() }.stream().collect(Collectors.toList())
 
         class Window(val a: Int, val b: Int, val c: Int) {
             fun sum(): Int { return a + b +c }

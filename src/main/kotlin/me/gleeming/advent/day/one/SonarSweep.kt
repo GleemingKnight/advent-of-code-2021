@@ -1,15 +1,12 @@
-package me.gleeming.advent.day1
+package me.gleeming.advent.day.one
 
 import me.gleeming.advent.task.AdventTask
-import java.io.BufferedReader
-import java.io.File
-import java.io.FileReader
 
 /**
  * Sonar Sweep
  * https://adventofcode.com/2021/day/1
  */
-class SonarSweep : AdventTask {
+class SonarSweep : AdventTask() {
 
     override val name: String
         get() = "Sonar Sweep"
@@ -18,12 +15,7 @@ class SonarSweep : AdventTask {
         get() = 1
 
     override fun run() {
-        val reader = BufferedReader(FileReader(File("inputs/day1/SonarSweep")))
-        var inputLine: String?
-
-        val numbers = ArrayList<Int>()
-        while (reader.readLine().also { inputLine = it } != null) if(inputLine != null) numbers.add(inputLine!!.toInt())
-        reader.close()
+        val numbers = readInput().map { it.toInt() }
 
         var amountOver = 0
         var lastAmount = -1
