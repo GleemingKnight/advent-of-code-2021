@@ -2,10 +2,6 @@ package me.gleeming.advent.day.one
 
 import me.gleeming.advent.task.AdventTask
 
-/**
- * Sonar Sweep
- * https://adventofcode.com/2021/day/1
- */
 class SonarSweep : AdventTask() {
 
     override val name: String

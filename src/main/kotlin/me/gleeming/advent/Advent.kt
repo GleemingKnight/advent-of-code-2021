@@ -1,7 +1,11 @@
 package me.gleeming.advent
 
-import me.gleeming.advent.day.one.SlidingWindow
+import me.gleeming.advent.day.four.GiantSquid
+import me.gleeming.advent.day.four.GiantSquid2
+import me.gleeming.advent.day.one.SonarSweep2
 import me.gleeming.advent.day.one.SonarSweep
+import me.gleeming.advent.day.three.BinaryDiagnostics
+import me.gleeming.advent.day.three.BinaryDiagnostics2
 import me.gleeming.advent.day.two.Dive
 import me.gleeming.advent.day.two.Dive2
 import me.gleeming.advent.task.AdventTask
@@ -78,12 +82,22 @@ fun getDays(): HashMap<Int, List<AdventTask>> {
 
     dayMap[1] = listOf(
         SonarSweep(),
-        SlidingWindow()
+        SonarSweep2()
     )
 
     dayMap[2] = listOf(
         Dive(),
         Dive2()
+    )
+
+    dayMap[3] = listOf(
+        BinaryDiagnostics(),
+        BinaryDiagnostics2()
+    )
+
+    dayMap[4] = listOf(
+        GiantSquid(),
+        GiantSquid2()
     )
 
     return dayMap

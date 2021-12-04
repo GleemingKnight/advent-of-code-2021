@@ -1,20 +1,14 @@
 package me.gleeming.advent.day.one
 
 import me.gleeming.advent.task.AdventTask
-import java.io.BufferedReader
-import java.io.File
-import java.io.FileReader
 import java.util.stream.Collectors
 
-/**
- * Sliding Window
- * https://adventofcode.com/2021/day/1#part2
- */
+
 @OptIn(ExperimentalStdlibApi::class)
-class SlidingWindow : AdventTask() {
+class SonarSweep2 : AdventTask() {
 
     override val name: String
-        get() = "Sliding Window"
+        get() = "Sonar Sweep"
 
     override val number: Int
         get() = 2
